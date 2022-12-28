@@ -1,13 +1,7 @@
 ﻿using gamesense_net;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using System.Windows;
-using Windows.Media;
-using Windows.Media.Control;
 using WindowsMediaController;
-using static WindowsMediaController.MediaManager;
 
 namespace GameSenseTestApp
 {
@@ -23,7 +17,7 @@ namespace GameSenseTestApp
             mediaMan = new MediaManager();
 
             await mediaMan.StartAsync();
-            
+
             string handlerJson = $$"""
     "datas":[
     {
@@ -47,31 +41,41 @@ namespace GameSenseTestApp
 
             while (true)
             {
-                var session = mediaMan.GetFocusedSession();
-                var res = await session.ControlSession.TryGetMediaPropertiesAsync();
-
-                if(res.Title == string.Empty || res.Title == null)
+                try
                 {
-                    dataJson = $$"""
+                    var session = mediaMan.GetFocusedSession();
+                    if (session == null)
+                    {
+                        dataJson = $$"""
     "value": {{c.GetNextValueFromCycler()}},
     "frame": {
         "song-name": "Nothing Playing",
         "album-name": " "
     }
 """;
-                }
-                else
-                {
-                    dataJson = $$"""
+                    }
+                    else
+                    {
+                        var res = await session.ControlSession.TryGetMediaPropertiesAsync();
+
+                        dataJson = $$"""
     "value": {{c.GetNextValueFromCycler()}},
     "frame": {
         "song-name": "{{res.Title}}",
         "album-name": "{{res.Artist}}"
     }
 """;
+                    }
+
+
+                    c.RunEvent("SONGTEXT", dataJson);
+                    await Task.Delay(1500);
                 }
-               
-                c.RunEvent("SONGTEXT", dataJson);
+                catch(Exception ex)
+                {
+                    // Don't do anything if an exception is thrown
+                }
+                
             }
         }
     }
