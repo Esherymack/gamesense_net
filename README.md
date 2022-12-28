@@ -1,6 +1,8 @@
 # gamesense_net
 Short implementation of SteelSeries GG Gamesense API in .NET 7
 
+As far as I know, it's the whole thing.
+
 # I wanted to make my new keyboard's OLED screen display whatever audio is currently playing.
 
 I know there's already an app that exists to do that. I also just wanted to program something.
