@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33027.239
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gamesense_net", "gamesense_net\gamesense_net.csproj", "{CC4C40D9-0E18-4814-AE4D-C0573EE53B32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameSenseTestApp", "GameSenseTestApp\GameSenseTestApp.csproj", "{9EE0833E-0BC0-4952-AA57-64BEBD4DA6D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC4C40D9-0E18-4814-AE4D-C0573EE53B32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4C40D9-0E18-4814-AE4D-C0573EE53B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4C40D9-0E18-4814-AE4D-C0573EE53B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4C40D9-0E18-4814-AE4D-C0573EE53B32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EE0833E-0BC0-4952-AA57-64BEBD4DA6D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EE0833E-0BC0-4952-AA57-64BEBD4DA6D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EE0833E-0BC0-4952-AA57-64BEBD4DA6D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EE0833E-0BC0-4952-AA57-64BEBD4DA6D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF0843C9-3161-4018-9289-85732E63FF57}
+	EndGlobalSection
+EndGlobal
