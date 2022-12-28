@@ -11,6 +11,8 @@ It utilizes WinRT to observe what the "focused" audio session is in the Windows 
 
 It does not scroll long text. Sorry.
 
+It can determine what audio is playing from all sorts of applications and websites, like YouTube and Spotify. No unnecessary web calls to external API's, only POSTs to the SteelSeries port.
+
 # Dependencies
 
 This relies on Newtonsoft (what doesn't) and [Dubya](https://www.nuget.org/packages/Dubya.WindowsMediaController/) becuase <i>someone</i> at Microsoft decided to remove the built-in support for WinRT from .NET in .NET 5.0. Loser.
